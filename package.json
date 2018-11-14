@@ -1,0 +1,32 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/akhant/task.git",
+  "author": "akhant <a.khantelev@mail.ru>",
+  "license": "MIT",
+  "scripts": {
+    "start": "set SKIP_PREFLIGHT_CHECK=true&&set PORT=8000&&set BROWSER=none&& react-scripts start"
+  },
+  "dependencies": {
+    "history": "^4.7.2",
+    "lodash": "^4.17.11",
+    "node-sass": "^4.10.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.83.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

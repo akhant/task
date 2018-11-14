@@ -1,0 +1,88 @@
+$text_blue: #4D6078
+$text_white: #fff
+$background: #112135
+body
+    margin: 0 
+    padding: 0
+    box-sizing: border-box
+    font-size: 1rem
+    max-height: 100vh
+    background: $background
+    //background: radial-gradient(circle at top, #023150 0, #112135 20%)
+    background-size: cover
+    font-family: Roboto, Open-sans, sans-serif
+    position: relative
+    color: $text_blue
+    h1 
+        text-align: center
+        font-size: 4rem
+        padding: 40px
+    a   
+        color: $text_blue
+        outline: none
+        &:hover
+            color: $text_white
+
+.balance
+    font-weight: bold
+    font-size: 1.3rem
+    text-align: center
+    .capital
+        font-size: 3rem
+        font-weight: normal
+        line-height: 1.1
+    &_icon
+        display: inline-block !important
+    .white
+        color: $text_white
+        text-transform: uppercase
+        
+.grid
+    margin-top: 20px
+    margin-bottom: 20px !important
+
+
+.nav__header
+    margin-top: 50px
+    font-weight: bold
+
+.bots
+    text-align: center
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    .bot
+        width: 30%
+        border: 1px solid red
+
+.time
+    .time__button
+        background-color: transparent
+        border-radius: 20px
+        border: 2px solid $text_blue     
+        color: $text_blue
+        font-size: 1rem
+        padding: .8rem 1.2rem
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+            border: 2px solid $text_white
+            color: $text_white
+            font-weight: bold
+        
+    .time__text
+        font-size: 1.3rem
+        color: $text_blue
+        padding: .8rem 1.2rem
+        font-weight: bold
+
+.footer
+    .menu 
+        &__item > a > div
+            text-align: center
+
+.active
+    border: 2px solid $text_white !important
+    color: $text_white !important
+    font-weight: bold !important
