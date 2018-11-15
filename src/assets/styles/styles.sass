@@ -1,12 +1,20 @@
 $text_blue: #4D6078
 $text_white: #fff
 $background: #112135
+html,body 
+    height: 100% !important
+
+#root
+    height: 100vh !important
+    overflow: hidden
+    position: relative
+
 body
+    position: relative
     margin: 0 
     padding: 0
     box-sizing: border-box
     font-size: 1rem
-    max-height: 100vh
     background: $background
     //background: radial-gradient(circle at top, #023150 0, #112135 20%)
     background-size: cover
@@ -23,36 +31,79 @@ body
         &:hover
             color: $text_white
 
+
+        
+.grid
+    margin: 0 !important
+    .row
+        padding: 0 !important
+        .column
+            padding: 0 !important
+
+
+.header
+    color: $text_blue !important
+    h1 
+        font-size: 2.7vh
+        font-weight: bold
+    .icon:before
+        font-size: 4vw !important
+    .icon:only-child
+        margin-right: 0
+    &_reload-button
+        display: flex !important
+        justify-content: flex-end !important
+        align-items: flex-end
+        img 
+            width: 35% !important
+            margin-right: 30%
+
 .balance
     font-weight: bold
-    font-size: 1.3rem
+    font-size: 4.5vw !important
     text-align: center
+    line-height: 1.1
+    &__capital
+        text-align: left
+        & div
+            margin-left: 20px
     .capital
-        font-size: 3rem
+        font-size: 1.8em
         font-weight: normal
-        line-height: 1.1
-    &_icon
         display: inline-block !important
+        margin-left: 2px
+    &__hold
+        display: flex !important
+        flex-direction: row
+        justify-content: center
+        margin-top: 1.3em !important
+        width: 100%
+        &_text
+            width: 55%
+            text-align: right
+        &_num
+            width: 26%
+            text-align: right
+        &_icon
+            width: 1em
+            height: 1em
+            margin-left: 10px
+            
     .white
         color: $text_white
         text-transform: uppercase
-        
-.grid
-    margin-top: 20px
-    margin-bottom: 20px !important
-
-
-.nav__header
-    margin-top: 50px
-    font-weight: bold
 
 .graph
+    overflow: hidden
     &__amount
         position: absolute
         top: 45%
-        left: 40%
+        left: calc(100%/2 - 40px)
         font-weight: normal
-        font-size: 1.7rem
+        font-size: 3vh
+    &__img
+        width: 100% 
+        
 
 .bots
     text-align: center
@@ -60,34 +111,69 @@ body
     display: flex
     flex-direction: row
     flex-wrap: wrap
+    padding: 2em !important
+    font-size: 1.3vh
     .bot
-        width: 30%
-        border: 1px solid red
-
+        background-color: #1B293E
+        border-radius: 5px
+        margin: 2px !important
+        height: 50% 
+        position: relative
+        cursor: pointer
+        &:hover
+            background-color: transparent
+            box-shadow: inset 0 0 2rem 1px lighten(#023151, 10%)
+        .bot_inside
+            width: 50% !important
+            height: 50% !important
+            position: absolute
+            top: 23%
+            left: 25%
+            img 
+                width: auto !important
+        &_percent
+            line-height: 1
+            
+            
+        
+            
 .time
+    align-items: flex-start !important
+    font-size: 1.2vh
     .time__button
         background-color: transparent
         border-radius: 20px
         border: 2px solid $text_blue     
         color: $text_blue
-        font-size: 1rem
-        padding: .8rem 1.2rem
+        font-size: 1em
+        padding: .8em 1.1em
         cursor: pointer
         transition: 0.3s
         outline: none
+        margin-top: 1.2rem
+        width: 90%
         &:hover
             border: 2px solid $text_white
             color: $text_white
             font-weight: bold
-        
     .time__text
-        font-size: 1.3rem
+        width: 100%
+        position: relative
+        top: 45%
+        font-size: 1.3em
         color: $text_blue
-        padding: .8rem 1.2rem
+        padding: 0
         font-weight: bold
+        text-align: center
 
 .footer
+    width: 100%
+    position: fixed
+    bottom: 0
+    background-color: #1B293E
+    align-items: center !important
     .menu 
+        align-items: flex-end !important
         &__item > a > div
             text-align: center
 
@@ -99,3 +185,19 @@ body
 
 .icon
     font-size: 2.5rem !important
+
+//proportion
+body
+    height: 100vh
+    .header
+        height: 13%
+    .balance
+        height: 13%
+    .graph
+        height: 30%
+    .bots
+        height: 28%
+    .time
+        height: 9%
+    .footer
+        height: 7%

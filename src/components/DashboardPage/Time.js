@@ -25,8 +25,8 @@ export default class Time extends Component {
     const { active } = this.state;
 
     return (
-      <Grid>
-        <Grid.Row className="time">
+      <Grid className="time">
+        <Grid.Row >
           <Grid.Column width={4}>
             <div className="time__text">Time Range:</div>
           </Grid.Column>
@@ -38,7 +38,7 @@ export default class Time extends Component {
                 active === "24h" ? "time__button active" : "time__button"
               }
             >
-              24 hours
+              24 h
             </button>
           </Grid.Column>
           <Grid.Column width={3}>

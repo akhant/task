@@ -19,8 +19,8 @@ export default class Graph extends Component {
   };
   render() {
     return (
-      <Grid>
-        <Grid.Row className="graph">
+      <Grid className="graph">
+        <Grid.Row >
           <div
             style={
               this.getSum() > 0 ? { color: "#5EA853" } : { color: "#E5407A" }
@@ -29,7 +29,7 @@ export default class Graph extends Component {
           >
             {this.renderSum()}
           </div>
-          <Image src={chart} fluid />
+          <Image className="graph__img" src={chart} centered />
         </Grid.Row>
       </Grid>
     );

@@ -11,7 +11,7 @@ export default class MenuExampleInverted extends Component {
   render() {
     return (
       <Grid className="footer">
-        <Grid.Row centered>
+        <Grid.Row className="menu" centered>
           <Grid.Column className="menu__item" width={3}>
             <Link to="/">
               <div>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 
 import Time from "./Time";
@@ -34,13 +34,13 @@ export class Dashboard extends Component {
     const { data } = this.props;
     const { active } = this.state;
     return (
-      <div>
+      <Fragment>
         <Header />
         <Balance {...data} />
         <Graph bots={data.bots} active={active} />
         <Bots bots={data.bots} active={active} />
         <Time handleTime={this.handleTime} />
-      </div>
+      </Fragment>
     );
   }
 }

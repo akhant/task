@@ -11,20 +11,26 @@ export default class Balance extends Component {
       on_hold
     } = this.props;
     return (
-      <Grid>
-        <Grid.Row className="balance">
-          <Grid.Column width={8} className="balance_capital">
+      <Grid className="balance">
+        <Grid.Row>
+          <Grid.Column floated="left" width={8} className="balance__capital">
             <div>TRADING CAPITAL</div>
             <div>
-            <span className="white capital">{`${trading_capital} ${trading_capital_currency}`}</span>
+              <span className="white capital">{`${trading_capital} ${trading_capital_currency}`}</span>
             </div>
           </Grid.Column>
-          <Grid.Column width={8} className="balance__amount">
-            <div>
-              <span>BALANCE: <span className="white">{balance}</span></span> <Image className="balance_icon" src={H} />
+          <Grid.Column width={8} className="balance__hold">
+            <div className="balance__hold_text">
+              <div>BALANCE: </div>
+              <div>ON HOLD: </div>
             </div>
-            <div>
-              <span>ON HOLD: <span className="white">{on_hold}</span></span> <Image className="balance_icon" src={H} />{" "}
+            <div className="balance__hold_num">
+              <div className="white">{balance}</div>
+              <div className="white">{on_hold}</div>
+            </div>
+            <div className="balance__hold_icon">
+              <Image size="tiny" className="balance_icon" src={H} />
+              <Image size="tiny" className="balance_icon" src={H} />
             </div>
           </Grid.Column>
         </Grid.Row>

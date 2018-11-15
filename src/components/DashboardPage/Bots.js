@@ -5,7 +5,7 @@ export default class Bots extends Component {
   render() {
     const { bots, active } = this.props;
     return (
-      <Grid>
+      <Grid className="bots">
         <Grid.Row centered>
           {bots && bots.map(bot => (
             <Bot key={bot.name} bot={bot} active={active} />

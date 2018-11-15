@@ -4,7 +4,8 @@ export default class Megabot extends Component {
   render() {
     return (
       <div>
-        CoinPrices
+        <h1>Coin Prices</h1>
+        
       </div>
     )
   }

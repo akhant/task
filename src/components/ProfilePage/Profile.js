@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class Megabot extends Component {
   render() {
     return (
       <div>
-        Profile
+        <h1>Profile</h1>
       </div>
-    )
+    );
   }
 }

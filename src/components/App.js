@@ -23,7 +23,7 @@ const store = configureStore();
 const App = () => (
   <Provider store={store}>
     <Router history={history}>
-      <Fragment>
+      <Fragment >
         {/*  <Menu /> */}
         <Switch>
           <Route path="/" exact component={Dashboard} />
