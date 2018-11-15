@@ -87,7 +87,10 @@ body
         &_icon
             width: 1em
             height: 1em
-            margin-left: 10px
+    &_icon
+        margin-left: 5px
+        margin-top: 3px
+              
             
     .white
         color: $text_white
@@ -98,7 +101,7 @@ body
     &__amount
         position: absolute
         top: 45%
-        left: calc(100%/2 - 40px)
+        left: calc(100%/2 - 45px)
         font-weight: normal
         font-size: 3vh
     &__img
@@ -133,10 +136,7 @@ body
                 width: auto !important
         &_percent
             line-height: 1
-            
-            
-        
-            
+             
 .time
     align-items: flex-start !important
     font-size: 1.2vh
@@ -201,3 +201,23 @@ body
         height: 9%
     .footer
         height: 7%
+
+=m 
+    @media (min-width: 998px)
+        @content
+
++m
+    .balance
+       font-size: 3.5rem !important
+    .graph__img
+        width: 50%
+    .header
+        .icon:before
+            font-size: 5rem !important
+        img 
+            width: 5rem !important
+    .graph__amount
+        top: 35%
+    .footer
+        font-size: 1.8rem
+
