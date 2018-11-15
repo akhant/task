@@ -10,7 +10,7 @@ body
     background: $background
     //background: radial-gradient(circle at top, #023150 0, #112135 20%)
     background-size: cover
-    font-family: Roboto, Open-sans, sans-serif
+    font-family: "Roboto",sans-serif !important
     position: relative
     color: $text_blue
     h1 
@@ -46,6 +46,14 @@ body
     margin-top: 50px
     font-weight: bold
 
+.graph
+    &__amount
+        position: absolute
+        top: 45%
+        left: 40%
+        font-weight: normal
+        font-size: 1.7rem
+
 .bots
     text-align: center
     width: 100%
@@ -66,6 +74,7 @@ body
         padding: .8rem 1.2rem
         cursor: pointer
         transition: 0.3s
+        outline: none
         &:hover
             border: 2px solid $text_white
             color: $text_white
@@ -86,3 +95,7 @@ body
     border: 2px solid $text_white !important
     color: $text_white !important
     font-weight: bold !important
+    outline: none !important
+
+.icon
+    font-size: 2.5rem !important

@@ -5,6 +5,12 @@ export default class Time extends Component {
   state = {
     active: "all_time"
   };
+  componentDidMount = () => {
+    this.setState({
+      active: localStorage.STATE || "all_time"
+    })
+  }
+  
   handleClick = e => {
     this.setState(
       {

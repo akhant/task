@@ -7,7 +7,7 @@ export default class Bot extends Component {
     const num = Number(bot[active]);
     return (
       <span
-        style={num > 0 ? { color: "green" } : { color: "red" }}
+        style={num > 0 ? { color: "#5EA853" } : { color: "#E5407A" }}
       >{`${num}%`}</span>
     );
   };

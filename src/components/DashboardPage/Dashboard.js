@@ -7,19 +7,28 @@ import Balance from "./Balance";
 import Header from "./Header";
 import Graph from "./Graph";
 import { loadData } from "../../actions";
+
 export class Dashboard extends Component {
   state = {
-    active: "all_time"
+    active: ""
   };
 
   componentDidMount = () => {
     this.props.loadData();
+    this.setState({
+      active: localStorage.STATE || "all_time"
+    });
   };
 
   handleTime = e => {
-    this.setState({
-      active: e
-    });
+    this.setState(
+      {
+        active: e
+      },
+      () => {
+        localStorage.STATE = e;
+      }
+    );
   };
   render() {
     const { data } = this.props;
@@ -28,7 +37,7 @@ export class Dashboard extends Component {
       <div>
         <Header />
         <Balance {...data} />
-        <Graph />
+        <Graph bots={data.bots} active={active} />
         <Bots bots={data.bots} active={active} />
         <Time handleTime={this.handleTime} />
       </div>
